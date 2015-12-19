@@ -3,9 +3,9 @@ var router = express.Router();
 
 var primerService = require('../services/primerService');
 
-/* GET home page. */
-router.get('/', function (req, res) {
-    res.render('index', { title: 'Azure Primer' });
+/* GET users listing. */
+router.get('/templates', function (req, res) {
+    res.json(primerService.getTemplates());
 });
 
 module.exports = router;
